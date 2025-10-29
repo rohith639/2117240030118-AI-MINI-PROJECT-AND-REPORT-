@@ -26,10 +26,7 @@ class SmartParking:
         print(f"Occupied Slots: {self.occupied_slots}")
         print(f"Empty Slots: {empty_slots}")
         print("---------------------------\n")
-
-# --- Main Program ---
 parking = SmartParking(5)
-
 parking.show_status()
 parking.park_vehicle()
 parking.park_vehicle()
@@ -39,5 +36,5 @@ parking.remove_vehicle()
 parking.show_status()
 parking.park_vehicle()
 parking.park_vehicle()
-parking.park_vehicle()  # Try to exceed limit
+parking.park_vehicle() 
 parking.show_status()
