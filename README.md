@@ -1,1 +1,41 @@
 # 2117240030118-AI-MINI-PROJECT-AND-REPORT-
+# Smart Parking System Simulation
+  
+    class SmartParking:
+       def __init__(self, total_slots):
+        self.total_slots = total_slots
+        self.occupied_slots = 0
+
+       def park_vehicle(self):
+        if self.occupied_slots < self.total_slots:
+            self.occupied_slots += 1
+            print(f"✅ Vehicle parked successfully. Slots filled: {self.occupied_slots}/{self.total_slots}")
+        else:
+            print("❌ Parking Full! No space available.")
+
+       def remove_vehicle(self):
+        if self.occupied_slots > 0:
+            self.occupied_slots -= 1
+            print(f"🚗 Vehicle exited. Slots filled: {self.occupied_slots}/{self.total_slots}")
+        else:
+            print("⚠️ No vehicles to remove!")
+
+       def show_status(self):
+        empty_slots = self.total_slots - self.occupied_slots
+        print("\n--- Parking Lot Status ---")
+        print(f"Total Slots: {self.total_slots}")
+        print(f"Occupied Slots: {self.occupied_slots}")
+        print(f"Empty Slots: {empty_slots}")
+        print("---------------------------\n")
+    parking = SmartParking(5)
+    parking.show_status()
+    parking.park_vehicle()
+    parking.park_vehicle()
+    parking.park_vehicle()
+    parking.show_status()
+    parking.remove_vehicle()
+    parking.show_status()
+    parking.park_vehicle()
+    parking.park_vehicle()
+    parking.park_vehicle()  
+    parking.show_status()
